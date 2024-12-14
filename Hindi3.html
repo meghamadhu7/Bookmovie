@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Page</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+    }
+    /* Header */
+    .header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  ;
+
+}
+
+.logo {
+  width: 120px; /* Adjust width as needed */
+  margin-right: 20px;
+}
+
+.search-bar {
+  flex: 1;
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.header-options {
+  display: flex;
+  align-items: center;
+}
+
+.sign-in-btn {
+  background-color: #e40046;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 3px;
+  margin-left: 20px;
+  text-decoration: none;
+}
+    
+    .location, .sign-in {
+        margin-left: 10px;
+        padding: 8px 12px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .movie-container {
+        display: flex;
+        max-width: 100%;
+        height: 450px;
+        margin: 20px auto;
+        background-color: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .poster {
+        display: grid;
+        padding: 20px;
+  
+  gap: 15px;
+    }
+    
+    .poster img {
+        width: 100%;
+  border-radius: 8px;
+  height: 350px;
+      
+    }
+    
+    .release-date {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        background-color: black;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+    }
+    
+    .details {
+        padding: 20px;
+        width: 60%;
+        justify-content: space-around;
+    }
+    
+    .details h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    
+    .interest-button {
+        display: inline-flex;
+        align-items: center;
+        background-color: #e0ffe6;
+        color: #28a745;
+        padding: 8px 12px;
+        border-radius: 5px;
+        cursor: pointer;
+        border: none;
+        margin-bottom: 10px;
+    }
+    
+    .interest-button span {
+        margin-left: 10px;
+        color: #555;
+    }
+    
+    .formats, .languages, .info {
+        margin: 8px 0;
+    }
+    
+    .book-button {
+        background-color: #ff5252;
+        color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+</style>
+</head>
+<body>
+    <header class="header">
+        <img src="logo.png" alt="BookMyShow" class="logo" />
+        <input type="text" placeholder="Search for Movies, Events, Plays, Sports and Activities" class="search-bar" />
+        <div class="header-options">
+         <a href="Signin.html" class="sign-in-btn">Sign In</a>
+  
+        </div>
+    </header>
+    <main>
+        <div class="movie-container">
+            <div class="poster">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC/et00354858-njsmtljekp-portrait.jpg" alt="Gladiator II Poster">
+                <span class="release-date">Releasing on 15 Nov, 2024</span>
+            </div>
+            <div class="details">
+                <h1>Baby</h1>
+                
+                <div class="formats">
+                    <button><p>2D</p></button>
+                        <button> <p>English, Tamil, Hindi, Telugu </p></button>
+                </div>
+                <div class="languages">
+                    <span>English, Tamil, Hindi, Telugu</span>
+                </div>
+                <div class="info">
+                    <span>2h 30m</span> • <span>Action, Adventure, Drama</span> • <span>UA</span>
+                </div>
+                <a href="SeatBooking1.html">
+                    <button class="book-button">Book tickets</button>
+                  </a>
+                  
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entertainment You Can Gift</title>
+  <style>
+    /* Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #fff;
+    }
+
+    /* Navbar Styling */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #ffffff;
+      border-bottom: 1px solid #ddd;
+    }
+    .navbar .left-menu, .navbar .right-menu {
+      display: flex;
+      align-items: center;
+    }
+    .navbar .left-menu a,
+    .navbar .right-menu a {
+      text-decoration: none;
+      color: #333;
+      margin: 0 10px;
+      font-size: 14px;
+    }
+    .navbar .right-menu button {
+      background-color: #e40046;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      cursor: pointer;
+      font-size: 14px;
+      border-radius: 3px;
+    }
+
+    /* Section style */
+    .banner {
+      background-image: url('your-image-path.jpg'); /* Add your image path here */
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      max-width: 1200px;
+    }
+
+    .content {
+      max-width: 50%;
+    }
+
+    .content h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .content p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .buttons button {
+      background-color: #f1f1f1;
+      color: #333;
+      border: none;
+      padding: 10px 20px;
+      margin-right: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .buttons button:hover {
+      background-color: #ddd;
+    }
+
+    /* Form container */
+    .form-container {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 10px;
+      width: 40%;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+
+    form input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #f1f1f1;
+      font-size: 1rem;
+    }
+
+    form button {
+      width: 100%;
+      padding: 15px;
+      background-color: #f1f1f1;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.2rem;
+    }
+
+    form button:hover {
+      background-color: #ddd;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .content {
+        max-width: 100%;
+        text-align: center;
+      }
+
+      .form-container {
+        width: 80%;
+        margin-top: 20px;
+      }
+
+      .buttons button {
+        margin-bottom: 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .content h1 {
+        font-size: 2.5rem;
+      }
+
+      .content p {
+        font-size: 1rem;
+      }
+    }
+    .banner {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4uJ8py-hEGesfbrdCqQh_NTYK_00niEh10Q&s'); /* Local image */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+  </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+      <div class="left-menu">
+        <a href="index.html">Movies</a>
+        <a href="Stream.html">Stream</a>
+        <a href="GIft.html">Gift Card</a>
+        <a href="#">Offers</a>
+     
+      </div>
+      <div class="right-menu">
+       
+        <button>Sign Up</button>
+      </div>
+    </div>
+
+    <!-- Banner and form -->
+    <section class="banner">
+      <div class="container">
+        <div class="content">
+          <h1>Entertainment you can gift.</h1>
+          <p>A variety of solutions to skyrocket your business with vouchers, promotions, loyalty, employee recognition & rewards.</p>
+          <div class="buttons">
+            <button>Watch video</button>
+            <button>Download Brochure</button>
+          </div>
+        </div>
+        <div class="form-container">
+          <form action="#" method="POST">
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" name="full-name" placeholder="Name" required>
+            
+            <label for="company-email">Company Email</label>
+            <input type="email" id="company-email" name="company-email" placeholder="Company Email" required>
+            
+            <label for="company-name">Company Name</label>
+            <input type="text" id="company-name" name="company-name" placeholder="Company Name" required>
+            
+            <label for="mobile-number">Mobile Number</label>
+            <input type="tel" id="mobile-number" name="mobile-number" placeholder="eg: 91480XXXXXX" required>
+            
+            <button type="submit">Receive a callback</button>
+          </form>
+        </div>
+      </div>
+    </section>
+</body>
+</html>

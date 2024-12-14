@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookMyShow Clone</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body Styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      color: #333;
+    }
+    /* Header */
+    .header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  width: 120px; /* Adjust width as needed */
+  margin-right: 20px;
+}
+
+.search-bar {
+  flex: 1;
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.header-options {
+  display: flex;
+  align-items: center;
+}
+
+.sign-in-btn {
+  background-color: #e40046;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 3px;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+    /* Navbar Styling */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #ffffff;
+      border-bottom: 1px solid #ddd;
+    }
+    .navbar .left-menu, .navbar .right-menu {
+      display: flex;
+      align-items: center;
+    }
+    .navbar .left-menu a,
+    .navbar .right-menu a {
+      text-decoration: none;
+      color: #333;
+      margin: 0 10px;
+      font-size: 14px;
+    }
+    .navbar .right-menu button {
+      background-color: #e40046;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      cursor: pointer;
+      font-size: 14px;
+      border-radius: 3px;
+    }
+
+    /* Banner Section */
+    .banner {
+      background-color: #2b2b2b;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      position: relative;
+    }
+    .banner .banner-content {
+      text-align: left;
+      max-width: 600px;
+    }
+    .banner h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .banner p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .banner .apply-button {
+      background-color: #e40046;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 3px;
+      text-decoration: none;
+    }
+    .banner img {
+      max-width: 200px;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+
+    /* Filters Section */
+    .filters-section {
+      display: flex;
+      padding: 20px;
+      background-color: #ffffff;
+      justify-content: center;
+      gap: 30px;
+    }
+    .filters, .movie-languages {
+      max-width: 300px;
+      width: 100%;
+    }
+    .filters h3, .movie-languages h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .filter-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .filter-tag {
+      padding: 6px 12px;
+      background-color: #eeeeee;
+      border-radius: 16px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .filter-tag:hover {
+      background-color: #ddd;
+    }
+    /* Container Layout */
+.container {
+  display: flex;
+  padding: 20px;
+}
+
+/* Filters Sidebar */
+.filters-sidebar {
+  width: 250px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.filters-sidebar h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.filter-group {
+  margin-bottom: 20px;
+}
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  color: #e40046;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.filter-tags .tag, .language-tags .tag {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: #eeeeee;
+  border-radius: 16px;
+  font-size: 14px;
+  margin: 5px 5px 0 0;
+  cursor: pointer;
+  color: #333;
+}
+
+.clear {
+  color: #e40046;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.browse-cinemas-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #e40046;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Movies Section */
+.movies-section {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.movies-section h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.language-tags {
+  margin-bottom: 20px;
+}
+.language-tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #f0f0f0;
+  border-radius: 15px;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.3s;
+}
+
+.tag:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+
+.coming-soon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.explore-link {
+  font-size: 14px;
+  color: #e40046;
+  text-decoration: none;
+}
+
+.movie-posters {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+}
+
+.movie-poster img {
+  width: 100%;
+  border-radius: 8px;
+}
+  </style>
+</head>
+<body>
+  <!-- header-->
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Section</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+  
+    <header class="header">
+      <img src="logo.png" alt="BookMyShow" class="logo" />
+      <input type="text" placeholder="Search for Movies, Events, Plays, Sports and Activities" class="search-bar" />
+      <div class="header-options">
+       <a href="Signin.html" class="sign-in-btn">Sign In</a>
+
+      </div>
+  
+    </header>
+  
+ <!-- Navbar -->
+ <div class="navbar">
+  <div class="left-menu">
+    <a href="index.html">Movies</a>
+    <a href="Stream.html">Stream</a>
+    <a href="GIft.html">Gift Card</a>
+    <a href="#">Offers</a>
+ 
+  </div>
+  <div class="right-menu">
+
+  </div>
+</div>
+
+  
+  
+
+   </div>
+ 
+
+  <!-- Banner Section -->
+  <div class="banner">
+    <div class="banner-content">
+      <h2>Your next credit card gets you 24 free* tickets!</h2>
+      <p>*T&Cs Apply</p>
+      <a href="#" class="apply-button">Apply Now</a>
+    </div>
+
+  </div>
+
+  </div>
+
+  <div class="container">
+   
+
+    <!-- Movies Section -->
+    <div class="movies-section">
+      <h2>Movies In Chennai</h2>
+      <div class="language-tags">
+        <a href="index.html" class="tag">Tamil</a>
+        <a href="Englishmovies.html" class="tag">English</a>
+        <a href="Hindi.html" class="tag">Hindi</a>
+        <a href="Telugumovie.html" class="tag">Telugu</a>
+        
+      </div>
+      
+      
+      <div class="coming-soon">
+        <h3>Coming Soon</h3>
+        <a href="#" class="explore-link">Explore Upcoming Movies ></a>
+      </div>
+     
+      
+      <!-- Movie Posters Grid -->
+      <div class="movie-posters">
+        <div><a href="Telugu1.html" class="movie-poster"><img src="https://in.bmscdn.com/events/moviecard/ET00310216.jpg" alt="Kanguva"></a></div>
+        <div><a href="Telugu2.html"  class="movie-poster"><img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/tillu-square-et00343267-1666852723.jpg" alt="Devara"></a></div>
+        <div> <a href="Telugu3.html" class="movie-poster"><img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/14-et00402118-1718858093.jpg"alt="Tillu Square"></a></div>
+        <div> <a href="Telugu4.html" class="movie-poster"><img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC/et00357490-mxshwerpkj-portrait.jpg" alt="14"></a></div>
+        <div> <a href="Telugu5.html" class="movie-poster"><img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/swag-et00401912-1727774376.jpg" alt="Kanguva"></a></div>
+        <div ><a href="Telugu6.html" class="movie-poster"><img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/bhimaa-et00361874-1704694323.jpg" alt="Swag"></a></div>
+        <div > <a href="Telugu7.html" class="movie-poster"><img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/van-et00398785-1716187021.jpg" alt="Bhimaa"></a></div>
+        <div ><a href="Telugu8.html"  class="movie-poster"><img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/bharathanatyam-et00392004-1711554575.jpg" alt="van"></a></div>
+        <div>  <a href="Telugu9.html" class="movie-poster"><img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/toofan-et00405821-1721814746.jpg" alt="Bharathanatyam "></a></div>
+        <div>  <a href="Telugu10.html" class="movie-poster"><img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/shivam-bhaje-et00404155-1721021817.jpg" alt="Shivam Bhaje"></a></div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
